@@ -25,7 +25,9 @@ import com.brainasaservice.android.suddenlywifi.services.AudioSenderService;
 
 /**
  * 
- * @author Damian Burke Audio fragment, displaying a certain layout and offering
+ * @author Damian Burke
+ *
+ * 		Audio fragment, displaying a certain layout and offering
  *         its functionality.
  * 
  */

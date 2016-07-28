@@ -137,8 +137,8 @@ public class WifiController {
 	 * obtain a channel for further wireless communication. Also setting up a
 	 * broadcast receiver to receive wifi-relevant changes.
 	 * 
-	 * @param activity
-	 *            The activity from which the controller is being instantiated
+	 * @param app
+	 *            The application from which the controller is being instantiated
 	 *            and in which it's used.
 	 */
 	public WifiController(App app) {

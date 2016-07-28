@@ -2,6 +2,8 @@ package com.brainasaservice.android.suddenlywifi.activities;
 
 import com.brainasaservice.android.suddenlywifi.R;
 import com.brainasaservice.android.suddenlywifi.etc.Config;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiManager;
@@ -22,6 +24,7 @@ import android.util.Log;
 public class NfcActivity extends com.brainasaservice.android.suddenlywifi.model.NfcActivity {
 	private static final String TAG = "NfcActivity";
 
+	@SuppressLint("HardwareIds")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,7 +45,7 @@ public class NfcActivity extends com.brainasaservice.android.suddenlywifi.model.
 
 	@Override
 	public void onNdefDiscovery(String[] payload) {
-		Log.d(TAG, "Received some NFC!");
+		Log.d(TAG, "Received NFC payload.");
 		for (String cur : payload) {
 			Log.d(TAG, "Received " + cur);
 			if (cur != null)

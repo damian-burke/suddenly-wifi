@@ -18,7 +18,7 @@ import android.util.Log;
  * 
  */
 public class WifiDirectBroadcastReceiver extends BroadcastReceiver {
-	private static final String TAG = "WifiDirectBroadcastReceiver";
+	private static final String TAG = "WifiDirectBroadcast";
 
 	private WifiP2pManager manager;
 	private Channel channel;
@@ -29,8 +29,8 @@ public class WifiDirectBroadcastReceiver extends BroadcastReceiver {
 	 *            WifiP2pManager system service
 	 * @param channel
 	 *            Wifi p2p channel
-	 * @param activity
-	 *            activity associated with the receiver
+	 * @param control
+	 *            WifiController instance
 	 */
 	public WifiDirectBroadcastReceiver(WifiP2pManager manager, Channel channel,
 			WifiController control) {
@@ -49,11 +49,11 @@ public class WifiDirectBroadcastReceiver extends BroadcastReceiver {
 			// UI update to indicate wifi p2p status.
 			int state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
 			if (state == WifiP2pManager.WIFI_P2P_STATE_ENABLED) {
-				Log.d(TAG, "wifi is Enabled.");
+				Log.d(TAG, "Wifi is enabled.");
 				control.setWifiP2pEnabled(true);
 			} else {
 				control.setWifiP2pEnabled(false);
-				Log.d(TAG, "Disablec.");
+				Log.d(TAG, "Wifi is disabled.");
 			}
 			// Log.d(NfcActivity.TAG, "P2P state changed - " + state);
 		} else if (WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)) {
