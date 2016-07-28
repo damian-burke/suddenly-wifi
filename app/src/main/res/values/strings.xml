@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">Suddenly WiFi</string>
+    <string name="title_nfc">Initialization</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_wifi">Wifi Connection</string>
+
+    
+    <string name="nfc_tooltip">Hold the phones\' backs against each other.</string>
+</resources>

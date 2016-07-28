@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/frag_wifiinfo_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Online"
+        android:padding="15dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/frag_wifiinfo_since"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frag_wifiinfo_status"
+        android:layout_alignLeft="@+id/frag_wifiinfo_peerlist"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/frag_wifiinfo_status"
+        android:text="3h5m"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+    <Button
+        android:id="@+id/frag_wifiinfo_inc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/frag_wifiinfo_out"
+        android:layout_below="@+id/frag_wifiinfo_status"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/frag_wifiinfo_status"
+        android:text="in: 3mb"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+    <Button
+        android:id="@+id/frag_wifiinfo_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frag_wifiinfo_inc"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/frag_wifiinfo_status"
+        android:text="out: 5mb"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+    <Button
+        android:id="@+id/frag_wifiinfo_peercount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/frag_wifiinfo_inc"
+        android:layout_alignLeft="@+id/frag_wifiinfo_peerlist"
+        android:layout_alignTop="@+id/frag_wifiinfo_inc"
+        android:layout_toLeftOf="@+id/frag_wifiinfo_status"
+        android:text="2 peers"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+    <ListView
+        android:id="@+id/frag_wifiinfo_peerlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/frag_wifiinfo_out"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/frag_wifiinfo_status"
+        android:text="3h5m"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+</RelativeLayout>

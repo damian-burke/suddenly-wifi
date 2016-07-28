@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/fragment_wifiaudio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:padding="30dp"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <TextView
+        android:id="@+id/fragment_wifiaudio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_wifiaudio_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Push to Talk"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/fragment_wifiaudio_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Idle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ToggleButton
+        android:id="@+id/fragment_wifiaudio_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_wifiaudio_button"
+        android:layout_alignLeft="@+id/fragment_wifiaudio_button"
+        android:layout_alignRight="@+id/fragment_wifiaudio_button"
+        android:text="Toggle" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_wifiaudio_toggle"
+        android:layout_centerHorizontal="true"
+        android:text="Toggle to keep speaking"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.brainasaservice.android.suddenlywifi">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="15" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi.direct"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <!--<uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+
+    <application
+        android:name=".etc.App"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.brainasaservice.android.suddenlywifi.activities.NfcActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/com.brainasaservice.android.suddenlywifi" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.brainasaservice.android.suddenlywifi.activities.WifiActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+
+        <meta-data
+            android:name="android.nfc.disable_beam_default"
+            android:value="true" />
+
+        <service
+            android:name=".services.FileSenderService"
+            android:enabled="true" />
+        <service
+            android:name=".services.FileReceiverService"
+            android:enabled="true" />
+        <service
+            android:name=".services.AudioSenderService"
+            android:enabled="true" />
+        <service
+            android:name=".services.AudioReceiverService"
+            android:enabled="true" />
+    </application>
+
+</manifest>
