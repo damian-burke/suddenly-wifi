@@ -71,3 +71,10 @@ License
 -------------
 
 This software is released under the [Apache License v2](https://www.apache.org/licenses/LICENSE-2.0).
+
+---------
+
+Copyright
+-------------
+
+Copyright 2016 Damian Burke
