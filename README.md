@@ -4,7 +4,7 @@ Suddenly WiFi - NFC Initiated WiFi-Direct for Android
 This repository contains an Android project I have worked on for my bachelor's thesis in computer science: **Suddenly WiFi**. The project is a fully-functional Android application (tested on Samsung Galaxy Nexus with Android 4.1 JellyBean), with the following functionality:
 
 - Exchange of unique identification via NFC
-- Initiation of WiFi Direct connection between two phones (in theory, more are possible)
+- Initiation of WiFi Direct connection between two phones (theoretically more are possible)
 - Exchange of trivial information (e.g. chat example or walkie-talkie example)
 - Statistics of the network (incoming/outgoing transfer, connected peers, etc.)
 
