@@ -1,4 +1,4 @@
-Suddenly WiFi - NFC Initiated WiFi-Direct for Android
+Suddenly WiFi - NFC Initiated WiFi-Direct for Android [![CircleCI](https://circleci.com/gh/damian-burke/suddenly-wifi.svg?style=svg)](https://circleci.com/gh/damian-burke/suddenly-wifi)
 ===================
 
 This repository contains an Android project I have worked on for my bachelor's thesis in computer science: **Suddenly WiFi**. The project is a fully-functional Android application (tested on Samsung Galaxy Nexus with Android 4.1 JellyBean), with the following functionality:
