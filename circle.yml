@@ -1,0 +1,23 @@
+general:
+    artifacts:
+        - /home/ubuntu/suddenly-wifi/app/build/outputs/apk/
+
+machine:
+    environment:
+        ANDROID_HOME: /usr/local/android-sdk-linux
+    java:
+        version: oraclejdk8
+
+
+dependencies:
+    pre:
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,extra-google-m2repository,extra-google-google_play_services,extra-and$
+        - echo y | android update sdk --no-ui --all --filter build-tools-24.0.0
+    cache_directories:
+        - /usr/local/android-sdk-linux/tools
+        - /usr/local/android-sdk-linux/build-tools/24.0.0
+
+test:
+    override:
+        - ./gradlew assemble
+
