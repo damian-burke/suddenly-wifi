@@ -11,11 +11,11 @@ machine:
 
 dependencies:
     pre:
-        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,extra-google-m2repository,extra-google-google_play_services,extra-and$
-        - echo y | android update sdk --no-ui --all --filter build-tools-24.0.0
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,extra-google-m2repository,extra-google-google_play_services,extra-android-support,android-24
+        - echo y | android update sdk --no-ui --all --filter build-tools-24.0.1
     cache_directories:
         - /usr/local/android-sdk-linux/tools
-        - /usr/local/android-sdk-linux/build-tools/24.0.0
+        - /usr/local/android-sdk-linux/build-tools/24.0.1
 
 test:
     override:
