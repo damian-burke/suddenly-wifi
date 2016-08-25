@@ -8,6 +8,7 @@ This repository contains an Android project I have worked on for my bachelor's t
 - Exchange of trivial information (e.g. chat example or walkie-talkie example)
 - Statistics of the network (incoming/outgoing transfer, connected peers, etc.)
 
+
 ----------
 
 Requirements
